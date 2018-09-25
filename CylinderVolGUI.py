@@ -1,4 +1,21 @@
 import tkinter as tk
+import math
+
+def submit():
+
+	print("Submit pressed")
+	r = float(entr.get())
+	h = float(enth.get())
+
+	v = math.pi*r*r*h
+	v = round(v,3)
+
+	output.config(state="normal")
+	output.insert(tk.INSERT,v)
+	output.config(state="disable")
+
+
+
 
 root = tk.Tk()
 root.title("volume of a Cylinder")
@@ -15,7 +32,7 @@ labh.pack()
 enth = tk.Entry(root)
 enth.pack()
 
-btn = tk.Button(root, text="Submit")
+btn = tk.Button(root, text="Submit", command=submit)
 btn.pack()
 
 output = tk.Text(root, width=200, height=40, borderwidth=12, relief=tk.GROOVE)
