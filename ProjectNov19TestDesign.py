@@ -32,6 +32,8 @@ def submit():
 	f.close()
 
 f = open("testfile.txt","w")
+
+
 #Store you data
 #When you press submit you need to add an element ot list. You will use this list
 #to display historial data. 
@@ -50,7 +52,7 @@ output.grid(row = 0, column = 0, rowspan = 5)
 
 labInput1 = tk.Label(root, text = "Running Tracker", font = "georgia")
 labInput1.config(background = "blue")
-labInput1.grid(row = 1, column = 0, columnspan = 7, sticky = "NESW")
+labInput1.grid(row = 1, column = 0, columnspan = 4, sticky = "NESW")
 
 labInput2 = tk.Label(root, text = "Distance: ", font = "georgia")
 labInput2.grid(row = 3, column = 0, sticky = "E")
@@ -79,13 +81,32 @@ dateIn.grid(row = 4, column = 3, sticky = "E")
 
 #**************Widget X**************
 
-bu1 = tk.Button(root, text="Input Data", width = 30, height = 5, command = submit)
-bu1.grid(row = 5, column = 2, columnspan = 2)
+bu1 = tk.Button(root, text="Input Data", width = 57, height = 5, command = submit)
+bu1.grid(row = 5, column = 0, columnspan = 6, sticky = "W")
 
-bu2 = tk.Button(root, text="View Past Data", width = 30, height = 5)
-bu2.grid(row = 5, column = 0, columnspan = 2)
+#**************Widget XI**************
 
+page2title = tk.Label(root, text = "Past Data", font = "georgia")
+page2title.config(background = "lime green")
+page2title.grid(row = 1, column = 4, columnspan = 4, sticky = "NESW")
 
+#**************Widget XI**************
+
+page2lab1 = tk.Label(root, text = "Distance", font = "georgia")
+page2lab1.grid(row = 2, column = 4)
+
+page2lab2 = tk.Label(root, text = "Route", font = "georgia")
+page2lab2.grid(row = 2, column = 5)
+
+page2lab3 = tk.Label(root, text = "Time", font = "georgia")
+page2lab3.grid(row = 2, column = 6)
+
+page2lab4 = tk.Label(root, text = "Date", font = "georgia")
+page2lab4.grid(row = 2, column = 7)
 
 
 root.mainloop()
+
+
+
+
